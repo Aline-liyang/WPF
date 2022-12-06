@@ -1,0 +1,55 @@
+﻿<Window x:Class="BindToXmlDataProvider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BindToXmlDataProvider"
+        mc:Ignorable="d"
+        Title="Bind to XML Data Provider" Height="450" Width="500">
+    
+    <Window.Resources>
+        <XmlDataProvider x:Key="products" Source="store.xml" XPath="/Products"></XmlDataProvider>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ListBox Name="lstProducts" Margin="5" DisplayMemberPath="ModelName"
+                ItemsSource="{Binding Source={StaticResource products},XPath=Product}" ></ListBox>
+
+        <GridSplitter Grid.Row="1" Height="5" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Gray"/>
+
+        <Border Grid.Row="2" Background="LightBlue" Padding="5" Margin="8">
+            <Grid DataContext="{Binding ElementName=lstProducts, Path=SelectedItem}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Margin="5" Text="Numéro Modèle :"/>
+                <TextBox Margin="5" Grid.Column="1" Text="{Binding XPath=ModelNumber}"/>
+
+                <TextBlock Margin="5" Text="Nom Modèle :" Grid.Column="0" Grid.Row="1"/>
+                <TextBox Margin="5" Text="{Binding XPath=ModelName}" Grid.Column="1" Grid.Row="1"/>
+
+                <TextBlock Margin="5" Text="Nom Modèle :" Grid.Column="0" Grid.Row="2"/>
+                <TextBox Margin="5"  Text="{Binding XPath=UnitCost}" Grid.Column="1" Grid.Row="2"/>
+
+                <TextBlock Margin="5" Text="Description:" Grid.Column="0" Grid.Row="3"/>
+                <TextBox Margin="5"  Text="{Binding XPath=Description}" Grid.Column="0" Grid.Row="4" VerticalScrollBarVisibility="Visible"
+                         TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

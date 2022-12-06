@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="store" targetNamespace="http://tempuri.org/store.xsd" xmlns:mstns="http://tempuri.org/store.xsd" xmlns="http://tempuri.org/store.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=CANGERIE;Initial Catalog=store;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" IsAppSettingsProperty="false" Modifier="Assembly" Name="storeConnectionString" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="store" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="store" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="store">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Categories" msprop:Generator_RowClassName="CategoriesRow" msprop:Generator_RowEvHandlerName="CategoriesRowChangeEventHandler" msprop:Generator_RowDeletedName="CategoriesRowDeleted" msprop:Generator_RowDeletingName="CategoriesRowDeleting" msprop:Generator_RowEvArgName="CategoriesRowChangeEvent" msprop:Generator_TablePropName="Categories" msprop:Generator_RowChangedName="CategoriesRowChanged" msprop:Generator_UserTableName="Categories" msprop:Generator_RowChangingName="CategoriesRowChanging" msprop:Generator_TableClassName="CategoriesDataTable" msprop:Generator_TableVarName="tableCategories">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CategoryID" msprop:Generator_UserColumnName="CategoryID" msprop:Generator_ColumnPropNameInTable="CategoryIDColumn" msprop:Generator_ColumnPropNameInRow="CategoryID" msprop:Generator_ColumnVarNameInTable="columnCategoryID" type="xs:string" />
+              <xs:element name="CategoryName" msprop:Generator_UserColumnName="CategoryName" msprop:Generator_ColumnPropNameInTable="CategoryNameColumn" msprop:Generator_ColumnPropNameInRow="CategoryName" msprop:Generator_ColumnVarNameInTable="columnCategoryName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Products" msprop:Generator_RowClassName="ProductsRow" msprop:Generator_RowEvHandlerName="ProductsRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductsRowDeleted" msprop:Generator_RowDeletingName="ProductsRowDeleting" msprop:Generator_RowEvArgName="ProductsRowChangeEvent" msprop:Generator_TablePropName="Products" msprop:Generator_RowChangedName="ProductsRowChanged" msprop:Generator_UserTableName="Products" msprop:Generator_RowChangingName="ProductsRowChanging" msprop:Generator_TableClassName="ProductsDataTable" msprop:Generator_TableVarName="tableProducts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductID" msprop:Generator_UserColumnName="ProductID" msprop:Generator_ColumnPropNameInTable="ProductIDColumn" msprop:Generator_ColumnPropNameInRow="ProductID" msprop:Generator_ColumnVarNameInTable="columnProductID" type="xs:string" />
+              <xs:element name="CategoryID" msprop:Generator_UserColumnName="CategoryID" msprop:Generator_ColumnPropNameInTable="CategoryIDColumn" msprop:Generator_ColumnPropNameInRow="CategoryID" msprop:Generator_ColumnVarNameInTable="columnCategoryID" type="xs:string" minOccurs="0" />
+              <xs:element name="ModelNumber" msprop:Generator_UserColumnName="ModelNumber" msprop:Generator_ColumnPropNameInTable="ModelNumberColumn" msprop:Generator_ColumnPropNameInRow="ModelNumber" msprop:Generator_ColumnVarNameInTable="columnModelNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ModelName" msprop:Generator_UserColumnName="ModelName" msprop:Generator_ColumnPropNameInTable="ModelNameColumn" msprop:Generator_ColumnPropNameInRow="ModelName" msprop:Generator_ColumnVarNameInTable="columnModelName" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductImage" msprop:Generator_UserColumnName="ProductImage" msprop:Generator_ColumnPropNameInTable="ProductImageColumn" msprop:Generator_ColumnPropNameInRow="ProductImage" msprop:Generator_ColumnVarNameInTable="columnProductImage" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitCost" msprop:Generator_UserColumnName="UnitCost" msprop:Generator_ColumnPropNameInTable="UnitCostColumn" msprop:Generator_ColumnPropNameInRow="UnitCost" msprop:Generator_ColumnVarNameInTable="columnUnitCost" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="CategoryID1" msprop:Generator_UserColumnName="CategoryID1" msprop:Generator_ColumnPropNameInTable="CategoryID1Column" msprop:Generator_ColumnPropNameInRow="CategoryID1" msprop:Generator_ColumnVarNameInTable="columnCategoryID1" type="xs:string" minOccurs="0" />
+              <xs:element name="CategoryName" msprop:Generator_UserColumnName="CategoryName" msprop:Generator_ColumnPropNameInTable="CategoryNameColumn" msprop:Generator_ColumnPropNameInRow="CategoryName" msprop:Generator_ColumnVarNameInTable="columnCategoryName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="CategoryIDKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Categories" />
+      <xs:field xpath="mstns:CategoryID" />
+    </xs:unique>
+    <xs:unique name="ProductsKey2">
+      <xs:selector xpath=".//mstns:Products" />
+      <xs:field xpath="mstns:CategoryID1" />
+    </xs:unique>
+    <xs:unique name="ProductsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Products" />
+      <xs:field xpath="mstns:ProductID" />
+    </xs:unique>
+    <xs:keyref name="CategoryProduct" refer="CategoryIDKey1" msprop:rel_Generator_UserParentTable="Categories" msprop:rel_Generator_UserChildTable="Products" msprop:rel_Generator_RelationVarName="relationCategoryProduct" msprop:rel_Generator_ChildPropName="GetProductsRows" msprop:rel_Generator_ParentPropName="CategoriesRow" msprop:rel_Generator_UserRelationName="CategoryProduct">
+      <xs:selector xpath=".//mstns:Products" />
+      <xs:field xpath="mstns:CategoryID" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

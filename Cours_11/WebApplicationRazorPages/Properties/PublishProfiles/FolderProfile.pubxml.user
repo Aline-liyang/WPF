@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\MonSite</_PublishTargetUrl>
+    <History>True|2022-11-09T04:11:30.0297991Z;False|2022-11-08T23:09:32.3064123-05:00;True|2022-11-08T23:01:49.1326566-05:00;True|2022-11-08T22:59:31.6510947-05:00;False|2022-11-08T22:57:12.9318989-05:00;True|2022-11-08T22:28:17.4177759-05:00;True|2022-11-08T22:26:56.5509214-05:00;False|2022-11-08T22:25:04.8516850-05:00;False|2022-11-08T22:23:30.0140761-05:00;True|2022-11-08T18:23:07.3062148-05:00;True|2022-11-08T17:06:05.8095279-05:00;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="WebApplicationRazorPagesContext">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=WebApplicationRazorPages.Data%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

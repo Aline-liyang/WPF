@@ -1,0 +1,7 @@
+E:\Rosemont\2022\38803_420-B05-RO\Pratique\Temps\Publish\store.xml
+E:\Rosemont\2022\38803_420-B05-RO\Pratique\Temps\Publish\store.xsd
+E:\Rosemont\2022\38803_420-B05-RO\Pratique\Temps\Publish\BindToCollection.exe
+E:\Rosemont\2022\38803_420-B05-RO\Pratique\Temps\Publish\BindToCollection.dll
+E:\Rosemont\2022\38803_420-B05-RO\Pratique\Temps\Publish\BindToCollection.deps.json
+E:\Rosemont\2022\38803_420-B05-RO\Pratique\Temps\Publish\BindToCollection.runtimeconfig.json
+E:\Rosemont\2022\38803_420-B05-RO\Pratique\Temps\Publish\BindToCollection.pdb

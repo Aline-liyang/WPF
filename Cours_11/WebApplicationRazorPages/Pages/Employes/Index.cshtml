@@ -1,0 +1,102 @@
+﻿@page
+@model WebApplicationRazorPages.Pages.Employes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].DateDeNaissance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].DateEmbauche)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].Adresse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].Province)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].CodePostal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].Pays)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].Telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].Extension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employe[0].Notes)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Employe) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateDeNaissance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateEmbauche)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Province)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodePostal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.EmployeID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.EmployeID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.EmployeID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

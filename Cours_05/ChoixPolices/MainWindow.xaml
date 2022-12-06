@@ -1,0 +1,19 @@
+﻿<Window x:Class="ChoixPolices.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChoixPolices"
+        mc:Ignorable="d"
+        Title="ChoixPolices" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="lstFonts" ItemsSource="{x:Static Fonts.SystemFontFamilies}" Grid.Row="0"/>
+        <TextBlock Grid.Row="1" FontFamily="{Binding ElementName=lstFonts, Path=SelectedItem}" TextAlignment="Center">
+            Je donne le cours B05 groupe 803 le vendredi 23 septembre 2022
+        </TextBlock>
+    </Grid>
+</Window>

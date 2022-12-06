@@ -1,0 +1,33 @@
+﻿<Window x:Class="SliderBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SliderBinding"
+        mc:Ignorable="d"
+        Title="SliderBinding" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel>
+            <Slider x:Name="slider" HorizontalAlignment="Left" Margin="23,28,0,0" Width="764" Minimum="1"
+                Maximum="100" Value="30" TickFrequency="1" IsSnapToTickEnabled="True" Interval="1"/>
+            
+            <TextBlock x:Name="txtFont"  Margin="20" FontSize="{Binding ElementName=slider, Path=Value, Mode=OneWay}"> 
+                Afficher ici la valeur du Slider
+            </TextBlock>
+            
+            <!--<TextBox x:Name="fontSize" Margin="20" Text="{Binding ElementName=slider, Path=Value}"></TextBox>-->
+            <TextBox x:Name="fontSize" Margin="20" Text="{Binding ElementName=txtFont, Path=FontSize, 
+                UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" >
+            </TextBox>
+            
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="15" x:Name="petit" Content="Texte Petit" Width="100" Click="petit_Click"/>
+                <Button Margin="15" x:Name="moyen" Content="Texte Moyen" Width="100" Click="moyen_Click"/>
+                <Button Margin="15" x:Name="grand" Content="Texte Grand" Width="100" Click="grand_Click"/>
+            </StackPanel>
+            
+        </StackPanel>
+
+
+    </Grid>
+</Window>
